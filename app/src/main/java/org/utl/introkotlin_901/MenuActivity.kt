@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import org.utl.introkotlin_901.ejemplo1.SumaActivity
+import org.utl.introkotlin_901.cinepolis.CinepolisActivity
+import org.utl.introkotlin_901.ejemplo2.SaludoActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,8 +18,14 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
 
         val btnSaludo = findViewById<Button>(R.id.btn2)
+        val btnCinepolis = findViewById<Button>(R.id.btn3)
+        val btnEjemplo = findViewById<Button>(R.id.btn4)
+
+        btnCinepolis.setOnClickListener {navigateToCinepolis()}
 
         btnSaludo.setOnClickListener {navigateToSaludo()}
+
+        btnEjemplo.setOnClickListener {navigateToEjemplo()}
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -28,6 +36,16 @@ class MenuActivity : AppCompatActivity() {
 
     private fun navigateToSaludo(){
         val intent = Intent(this, SumaActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToCinepolis(){
+        val intent = Intent(this, CinepolisActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToEjemplo(){
+        val intent = Intent(this, SaludoActivity::class.java)
         startActivity(intent)
     }
 }
