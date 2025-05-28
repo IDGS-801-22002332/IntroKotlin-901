@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="@color/azulbajo"
+    tools:context=".diccionario.BuscarActivity">
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Buscar palabras"
+      android:textColor="@color/black"
+      android:textSize="35sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <RadioGroup
+      android:id="@+id/radioGroup"
+      android:layout_width="235dp"
+      android:layout_height="106dp"
+      android:layout_marginTop="28dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.291"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Español" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingles" />
+  </RadioGroup>
+
+  <TextView
+      android:id="@+id/tvPlabra"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:text="Palabra a buscar"
+      android:textColor="@color/black"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.261"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/edtPalabraB"
+      android:layout_width="244dp"
+      android:layout_height="57dp"
+      android:layout_marginTop="12dp"
+      android:maxLines="1"
+      android:singleLine="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.311"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvPlabra" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnBuscar"
+      android:layout_width="81dp"
+      android:layout_height="42dp"
+      android:background="@color/white"
+      android:text="Buscar"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtPalabraB"
+      app:layout_constraintVertical_bias="0.078" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnRegresar"
+      android:layout_width="81dp"
+      android:layout_height="42dp"
+      android:background="@color/white"
+      android:text="Regresar"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.798"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnBuscar"
+      app:layout_constraintVertical_bias="0.724" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvResultado"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=""
+      android:textColor="@color/black"
+      android:textSize="20sp"
+      app:layout_constraintTop_toBottomOf="@+id/btnBuscar"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintVertical_bias="0.3"
+      />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
